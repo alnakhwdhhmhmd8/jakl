@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 jobs:
   secure-vps:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     steps:
       - name: Install & Configure SSH
         run: |
@@ -27,7 +27,7 @@ jobs:
       - name: Verify SSH Access
         run: |
           echo "Tailscale VPS ready!"
-          echo "IP: $env:TAILSCALE_IP"
+          echo "IP: $TAILSCALE_IP"
           echo "User: root"
           echo "Pass: admin@123"
 
